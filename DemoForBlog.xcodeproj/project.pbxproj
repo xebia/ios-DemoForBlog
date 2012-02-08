@@ -26,6 +26,9 @@
 		9030DF0714E2AF4A00325CFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9030DEDA14E2AF4900325CFD /* Foundation.framework */; };
 		9030DF0F14E2AF4A00325CFD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9030DF0D14E2AF4A00325CFD /* InfoPlist.strings */; };
 		9030DF1214E2AF4A00325CFD /* DemoForBlogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9030DF1114E2AF4A00325CFD /* DemoForBlogTests.m */; };
+		9030DF2D14E2BA9F00325CFD /* EntityNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 9030DF2C14E2BA9F00325CFD /* EntityNames.m */; };
+		9030DF3014E2BB2E00325CFD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9030DF2F14E2BB2E00325CFD /* CoreData.framework */; };
+		9030DF3714E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9030DF3514E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,17 +46,17 @@
 		9030DED814E2AF4900325CFD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9030DEDA14E2AF4900325CFD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9030DEDC14E2AF4900325CFD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9030DEE014E2AF4900325CFD /* DemoForBlog-Info.plist */ = {isa = PBXFileReference; path = "DemoForBlog-Info.plist"; sourceTree = "<group>"; };
+		9030DEE014E2AF4900325CFD /* DemoForBlog-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DemoForBlog-Info.plist"; sourceTree = "<group>"; };
 		9030DEE214E2AF4900325CFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9030DEE414E2AF4900325CFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9030DEE614E2AF4900325CFD /* DemoForBlog-Prefix.pch */ = {isa = PBXFileReference; path = "DemoForBlog-Prefix.pch"; sourceTree = "<group>"; };
-		9030DEE714E2AF4900325CFD /* XSDAppDelegate.h */ = {isa = PBXFileReference; path = XSDAppDelegate.h; sourceTree = "<group>"; };
+		9030DEE614E2AF4900325CFD /* DemoForBlog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoForBlog-Prefix.pch"; sourceTree = "<group>"; };
+		9030DEE714E2AF4900325CFD /* XSDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSDAppDelegate.h; sourceTree = "<group>"; };
 		9030DEE814E2AF4900325CFD /* XSDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSDAppDelegate.m; sourceTree = "<group>"; };
-		9030DEEA14E2AF4900325CFD /* XSDFirstViewController.h */ = {isa = PBXFileReference; path = XSDFirstViewController.h; sourceTree = "<group>"; };
+		9030DEEA14E2AF4900325CFD /* XSDFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSDFirstViewController.h; sourceTree = "<group>"; };
 		9030DEEB14E2AF4900325CFD /* XSDFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSDFirstViewController.m; sourceTree = "<group>"; };
 		9030DEED14E2AF4A00325CFD /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		9030DEEF14E2AF4A00325CFD /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		9030DEF114E2AF4A00325CFD /* XSDSecondViewController.h */ = {isa = PBXFileReference; path = XSDSecondViewController.h; sourceTree = "<group>"; };
+		9030DEF114E2AF4A00325CFD /* XSDSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSDSecondViewController.h; sourceTree = "<group>"; };
 		9030DEF214E2AF4A00325CFD /* XSDSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSDSecondViewController.m; sourceTree = "<group>"; };
 		9030DEF414E2AF4A00325CFD /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		9030DEF614E2AF4A00325CFD /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
@@ -61,10 +64,14 @@
 		9030DEFC14E2AF4A00325CFD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/XSDSecondViewController.xib; sourceTree = "<group>"; };
 		9030DF0314E2AF4A00325CFD /* DemoForBlogTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoForBlogTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9030DF0414E2AF4A00325CFD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		9030DF0C14E2AF4A00325CFD /* DemoForBlogTests-Info.plist */ = {isa = PBXFileReference; path = "DemoForBlogTests-Info.plist"; sourceTree = "<group>"; };
+		9030DF0C14E2AF4A00325CFD /* DemoForBlogTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DemoForBlogTests-Info.plist"; sourceTree = "<group>"; };
 		9030DF0E14E2AF4A00325CFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9030DF1014E2AF4A00325CFD /* DemoForBlogTests.h */ = {isa = PBXFileReference; path = DemoForBlogTests.h; sourceTree = "<group>"; };
+		9030DF1014E2AF4A00325CFD /* DemoForBlogTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoForBlogTests.h; sourceTree = "<group>"; };
 		9030DF1114E2AF4A00325CFD /* DemoForBlogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoForBlogTests.m; sourceTree = "<group>"; };
+		9030DF2A14E2BA9500325CFD /* EntityNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityNames.h; sourceTree = "<group>"; };
+		9030DF2C14E2BA9F00325CFD /* EntityNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityNames.m; sourceTree = "<group>"; };
+		9030DF2F14E2BB2E00325CFD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9030DF3614E2BD3C00325CFD /* DemoForBlogModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DemoForBlogModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9030DF3014E2BB2E00325CFD /* CoreData.framework in Frameworks */,
 				9030DED914E2AF4900325CFD /* UIKit.framework in Frameworks */,
 				9030DEDB14E2AF4900325CFD /* Foundation.framework in Frameworks */,
 				9030DEDD14E2AF4900325CFD /* CoreGraphics.framework in Frameworks */,
@@ -94,6 +102,8 @@
 		9030DEC914E2AF4900325CFD = {
 			isa = PBXGroup;
 			children = (
+				9030DF3514E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld */,
+				9030DF2F14E2BB2E00325CFD /* CoreData.framework */,
 				9030DEDE14E2AF4900325CFD /* DemoForBlog */,
 				9030DF0A14E2AF4A00325CFD /* DemoForBlogTests */,
 				9030DED714E2AF4900325CFD /* Frameworks */,
@@ -124,6 +134,7 @@
 		9030DEDE14E2AF4900325CFD /* DemoForBlog */ = {
 			isa = PBXGroup;
 			children = (
+				9030DF2E14E2BAA500325CFD /* Constants */,
 				9030DEE714E2AF4900325CFD /* XSDAppDelegate.h */,
 				9030DEE814E2AF4900325CFD /* XSDAppDelegate.m */,
 				9030DEEA14E2AF4900325CFD /* XSDFirstViewController.h */,
@@ -169,6 +180,15 @@
 				9030DF0D14E2AF4A00325CFD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9030DF2E14E2BAA500325CFD /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9030DF2A14E2BA9500325CFD /* EntityNames.h */,
+				9030DF2C14E2BA9F00325CFD /* EntityNames.m */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +306,8 @@
 				9030DEE914E2AF4900325CFD /* XSDAppDelegate.m in Sources */,
 				9030DEEC14E2AF4900325CFD /* XSDFirstViewController.m in Sources */,
 				9030DEF314E2AF4A00325CFD /* XSDSecondViewController.m in Sources */,
+				9030DF2D14E2BA9F00325CFD /* EntityNames.m in Sources */,
+				9030DF3714E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +485,7 @@
 				9030DF1714E2AF4A00325CFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9030DF1814E2AF4A00325CFD /* Build configuration list for PBXNativeTarget "DemoForBlogTests" */ = {
 			isa = XCConfigurationList;
@@ -471,8 +494,22 @@
 				9030DF1A14E2AF4A00325CFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9030DF3514E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9030DF3614E2BD3C00325CFD /* DemoForBlogModel.xcdatamodel */,
+			);
+			currentVersion = 9030DF3614E2BD3C00325CFD /* DemoForBlogModel.xcdatamodel */;
+			path = DemoForBlogModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9030DECB14E2AF4900325CFD /* Project object */;
 }
