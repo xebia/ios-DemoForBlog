@@ -102,7 +102,6 @@
 		9030DEC914E2AF4900325CFD = {
 			isa = PBXGroup;
 			children = (
-				9030DF3514E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld */,
 				9030DF2F14E2BB2E00325CFD /* CoreData.framework */,
 				9030DEDE14E2AF4900325CFD /* DemoForBlog */,
 				9030DF0A14E2AF4A00325CFD /* DemoForBlogTests */,
@@ -155,6 +154,7 @@
 		9030DEDF14E2AF4900325CFD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9030DF3514E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld */,
 				9030DEE014E2AF4900325CFD /* DemoForBlog-Info.plist */,
 				9030DEE114E2AF4900325CFD /* InfoPlist.strings */,
 				9030DEE414E2AF4900325CFD /* main.m */,
@@ -506,7 +506,7 @@
 			);
 			currentVersion = 9030DF3614E2BD3C00325CFD /* DemoForBlogModel.xcdatamodel */;
 			path = DemoForBlogModel.xcdatamodeld;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
