@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface XSDFirstViewController : UIViewController
+@interface XSDFirstViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+
+//-- Data related properties
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
 @end
