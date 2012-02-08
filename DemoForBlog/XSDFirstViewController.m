@@ -97,14 +97,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (NSFetchedResultsController*)fetchedResultsController 
 {
-    // if allready created return the created conroller;
+    // if allready created return the created controller;
     if (fetchedResultsController) return fetchedResultsController;
     
     // managed object context
     XSDAppDelegate *appDelegate = (XSDAppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     
-    // create fetch request for project entities
+    // create fetch request for demo entities
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:DEMO_ENTITY_NAME  inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
@@ -124,7 +124,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // delegate events to self
     [frc setDelegate:self];
     
-    // assign the created controller to the property and release it
+    // assign the created controller to the property
     [self setFetchedResultsController:frc];
     
     return fetchedResultsController;
