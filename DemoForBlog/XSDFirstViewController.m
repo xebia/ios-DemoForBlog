@@ -109,11 +109,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSEntityDescription *entity = [NSEntityDescription entityForName:DEMO_ENTITY_NAME  inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
     
-    //    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"syncForProject = %@", self.sync];
-    //    [fetchRequest setPredicate:predicate];
-    
-    //    [fetchRequest setFetchBatchSize:20];
-    
     // set sort properties
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];    
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];    
@@ -157,8 +152,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
             break;
             
         case NSFetchedResultsChangeUpdate:
-            //TODO
-            //            [[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:
