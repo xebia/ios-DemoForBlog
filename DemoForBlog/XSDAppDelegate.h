@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XSDAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
+@interface XSDAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate> {
+    NSManagedObjectContext *managedObjectContext;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) UITabBarController *tabBarController;
+
+@property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 
 @end

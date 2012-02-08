@@ -83,4 +83,69 @@
 }
 */
 
+#pragma mark -
+#pragma mark Core Data
+
+
+/**
+ Returns the managed object context for the application.
+ If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
+ */
+- (NSManagedObjectContext *) managedObjectContext {
+    if(managedObjectContext != nil) {
+        return managedObjectContext;
+    }
+    
+    // get NSManagedObjectModel
+    NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];    
+    
+    // get documents directory
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documents = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    
+    // get NSPersistentStoreCoordinator
+	NSString *databaseFilePath = [documents stringByAppendingPathComponent: @"DemoForBlog.sqlite"];
+	NSURL *storeUrl = [NSURL fileURLWithPath: databaseFilePath];	
+    
+    if(DEBUG) {
+        NSLog(@"Store URL: %@", databaseFilePath);
+    }
+    
+	NSError *error;
+    NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] 
+                                                 initWithManagedObjectModel:managedObjectModel];
+    
+    if (![coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        
+        //Removes the data file and then tries again of creating MOC fails.:
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSError *rmError = nil;
+        if([fileManager removeItemAtURL:storeUrl error:&rmError]) {
+            NSLog(@"Error creating managed object context %@, %@", error, [error userInfo]);
+            error = nil;
+            if (![coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error]) {
+                NSLog(@"Unresolved error at 2nd attempt %@, %@", rmError, [rmError userInfo]);
+                exit(-1);
+            }
+        } else {
+            NSLog(@"Unresolved error %@, %@", rmError, [rmError userInfo]);
+            exit(-1);
+        }
+    } 
+    
+    NSManagedObjectContext *newContext = [[NSManagedObjectContext alloc] init];
+    [newContext setPersistentStoreCoordinator: coordinator];
+    [newContext setUndoManager:nil];
+    
+    managedObjectContext = newContext;
+    
+    
+    return managedObjectContext;
+}
+
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
+    return [[self managedObjectContext] persistentStoreCoordinator];
+} 
+
 @end
