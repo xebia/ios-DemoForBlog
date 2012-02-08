@@ -120,7 +120,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                                               managedObjectContext:context 
                                                 sectionNameKeyPath:nil 
                                                          cacheName:nil];
-    //                                                         cacheName:@"Root"];
+    //                                                   cacheName:@"Root"];
     // delegate events to self
     [frc setDelegate:self];
     
@@ -189,13 +189,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (error) {
         NSLog(@"Error occured fetching projects: %@", error);
     }
-    
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(synchingDone:)
-//                                                 name:SyncOperationFinishedNotification object:nil];
-//    [self refreshToolbarItemsToRunningState: NO withUpdatedDate: nil];
-
-    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
