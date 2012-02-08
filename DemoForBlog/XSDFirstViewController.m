@@ -88,6 +88,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 //        cell.selectionStyle = UITableViewCellSelectionStyleBlue;                                  
     }
     
+    //Filling the actual data into a cell has been factored out to allow code reuse when receiving a NSFetchedResultsChangeUpdate.
     [self configureCell:cell atIndexPath:indexPath];
 
     return cell;
@@ -100,7 +101,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // if allready created return the created controller;
     if (fetchedResultsController) return fetchedResultsController;
     
-    // managed object context
+    // create a managed object context
     XSDAppDelegate *appDelegate = (XSDAppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     
@@ -130,11 +131,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     return fetchedResultsController;
 }
 
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {  
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    //Lets the tableview know we're potentially doing a bunch of updates.
     [self.tableView beginUpdates];
 }
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    //We're finished updating the tableview's data.
     [self.tableView endUpdates];
 }
 
@@ -186,9 +189,10 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // perform fetch
     NSError *error = nil;
+    //TODO Don't thin we should actually be fetching during view load
     [[self fetchedResultsController] performFetch:&error];
     if (error) {
-        NSLog(@"Error occured fetching projects: %@", error);
+        NSLog(@"Error occured fetching data: %@", error);
     }
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -196,8 +200,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
