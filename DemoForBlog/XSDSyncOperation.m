@@ -37,7 +37,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     NSDate *syncStart = [NSDate date];
     
     //Simulate a long running operation. ;)
-    [NSThread sleepForTimeInterval:3.0];
+    [NSThread sleepForTimeInterval:0.4];
 
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:DEMO_ENTITY_NAME inManagedObjectContext:context];
