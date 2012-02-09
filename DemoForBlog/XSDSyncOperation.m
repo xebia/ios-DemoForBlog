@@ -11,6 +11,7 @@
 #import "XSDAppDelegate.h"
 #import "XSDEntityNames.h"
 #import "XSDSyncOperation.h"
+#import "XSDDemo.h"
 
 NSString * const SyncOperationFinishedNotification = @"SyncOperationFinishedNotification";
 
@@ -27,11 +28,16 @@ NSString * const SyncOperationFinishedNotification = @"SyncOperationFinishedNoti
     [fetchRequest setEntity:entity];
 
     NSError *error = nil;
-    NSArray *demos = [context executeFetchRequest:fetchRequest error:&error];
-    if (error) {
-        NSLog(@"Error occured fetching demo objects: %@", error);
-        return NO;
-    }
+//    NSArray *demos = [context executeFetchRequest:fetchRequest error:&error];
+//    if (error) {
+//        NSLog(@"Error occured fetching demo objects: %@", error);
+//        return NO;
+//    }
+    
+    XSDDemo *demo = [NSEntityDescription insertNewObjectForEntityForName:DEMO_ENTITY_NAME inManagedObjectContext:context];
+    demo.name = @"Test";
+    demo.info = @"Info";
+
     
     //Store resulting objects and broadcast the save operation to the syncdelegate.
     [[NSNotificationCenter defaultCenter] addObserver:syncDelegate selector:@selector(syncDidSave:) name:NSManagedObjectContextDidSaveNotification object:context];

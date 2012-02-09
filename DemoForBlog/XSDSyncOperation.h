@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString * const SyncOperationFinishedNotification;
-
 // Protocol for the importer to communicate with its delegate.
 @protocol XSDSyncDelegate <NSObject>
 // Notification posted by NSManagedObjectContext when saved.

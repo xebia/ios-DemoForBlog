@@ -16,6 +16,7 @@
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
+@synthesize operationQueue;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -58,6 +59,7 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+    [self doSync];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -82,6 +84,55 @@
 {
 }
 */
+
+#pragma mark -
+#pragma mark Sync related code
+
+-(void)doSync
+{
+    XSDSyncOperation *sync = [[XSDSyncOperation alloc]init];
+    sync.syncDelegate = self;
+    
+    [sync setCompletionBlock:^{
+        [self doSync];
+    }];
+    
+    if (sync)
+        [[self operationQueue] addOperation: sync];
+}
+
+- (void)syncDidSave:(NSNotification *)saveNotification {
+    
+    if ([NSThread isMainThread]) {
+        [self.managedObjectContext mergeChangesFromContextDidSaveNotification:saveNotification];
+    } else {
+        [self performSelectorOnMainThread:@selector(syncDidSave:) withObject:saveNotification waitUntilDone:NO];
+    }
+}
+
+- (void)syncDidAbort
+{
+    if ([NSThread isMainThread]) {
+        UIAlertView *alert =
+        [[UIAlertView alloc] initWithTitle: @"Sync Failed"
+                                   message: @"An error occured while attempting to synchronize with the back-end."
+                                  delegate: nil
+                         cancelButtonTitle: @"OK"
+                         otherButtonTitles: nil];
+        [alert show];
+    } else {
+        [self performSelectorOnMainThread:@selector(syncDidAbort) withObject:nil waitUntilDone:NO];
+    }
+}
+
+- (NSOperationQueue *)operationQueue {
+    if (operationQueue == nil) {
+        operationQueue = [[NSOperationQueue alloc] init];
+        //hard coded settings, we want to make sure only one sync runs concurrently.
+        operationQueue.maxConcurrentOperationCount = 1;
+    }
+    return operationQueue;
+}
 
 #pragma mark -
 #pragma mark Core Data
