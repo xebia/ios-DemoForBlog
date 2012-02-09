@@ -1,10 +1,11 @@
 //
-//  XmlNodeNames.h
-//  Endeavour Dashboard
+//  XSDEntityNames.h
+//  DemoForBlog
 //
-//  Created by Jeroen Leenarts on 13-10-10.
-//  Copyright (c) 2010 Info Support. All rights reserved.
+//  Created by Jeroen Leenarts on 08-02-12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
+
 
 #import <Foundation/Foundation.h>
 

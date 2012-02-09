@@ -1,12 +1,12 @@
 //
-//  XmlNodeNames.m
-//  Endeavour Dashboard
+//  XSDEntityNames.m
+//  DemoForBlog
 //
-//  Created by Jeroen Leenarts on 13-10-10.
-//  Copyright (c) 2010 Info Support. All rights reserved.
+//  Created by Jeroen Leenarts on 08-02-12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "EntityNames.h"
+#import "XSDEntityNames.h"
 
 NSString * const DEMO_ENTITY_NAME          = @"Demo";
 NSString * const GRAPH_DATA_ENTITY_NAME       = @"GraphData";

@@ -144,8 +144,4 @@
     return managedObjectContext;
 }
 
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
-    return [[self managedObjectContext] persistentStoreCoordinator];
-} 
-
 @end

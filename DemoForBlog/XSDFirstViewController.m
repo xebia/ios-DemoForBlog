@@ -9,7 +9,7 @@
 #import "XSDFirstViewController.h"
 
 #import "XSDAppDelegate.h"
-#import "EntityNames.h"
+#import "XSDEntityNames.h"
 
 @implementation XSDFirstViewController
 

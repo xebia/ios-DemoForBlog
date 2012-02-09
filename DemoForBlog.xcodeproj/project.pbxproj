@@ -26,9 +26,10 @@
 		9030DF0714E2AF4A00325CFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9030DEDA14E2AF4900325CFD /* Foundation.framework */; };
 		9030DF0F14E2AF4A00325CFD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9030DF0D14E2AF4A00325CFD /* InfoPlist.strings */; };
 		9030DF1214E2AF4A00325CFD /* DemoForBlogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9030DF1114E2AF4A00325CFD /* DemoForBlogTests.m */; };
-		9030DF2D14E2BA9F00325CFD /* EntityNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 9030DF2C14E2BA9F00325CFD /* EntityNames.m */; };
+		9030DF2D14E2BA9F00325CFD /* XSDEntityNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 9030DF2C14E2BA9F00325CFD /* XSDEntityNames.m */; };
 		9030DF3014E2BB2E00325CFD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9030DF2F14E2BB2E00325CFD /* CoreData.framework */; };
 		9030DF3714E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9030DF3514E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld */; };
+		90A5D8E714E3C5D700D1DB07 /* XSDSyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5D8E614E3C5D700D1DB07 /* XSDSyncOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,10 +69,12 @@
 		9030DF0E14E2AF4A00325CFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9030DF1014E2AF4A00325CFD /* DemoForBlogTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoForBlogTests.h; sourceTree = "<group>"; };
 		9030DF1114E2AF4A00325CFD /* DemoForBlogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoForBlogTests.m; sourceTree = "<group>"; };
-		9030DF2A14E2BA9500325CFD /* EntityNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityNames.h; sourceTree = "<group>"; };
-		9030DF2C14E2BA9F00325CFD /* EntityNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityNames.m; sourceTree = "<group>"; };
+		9030DF2A14E2BA9500325CFD /* XSDEntityNames.h */ = {isa = PBXFileReference; fileEncoding = 4; path = XSDEntityNames.h; sourceTree = "<group>"; };
+		9030DF2C14E2BA9F00325CFD /* XSDEntityNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSDEntityNames.m; sourceTree = "<group>"; };
 		9030DF2F14E2BB2E00325CFD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9030DF3614E2BD3C00325CFD /* DemoForBlogModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DemoForBlogModel.xcdatamodel; sourceTree = "<group>"; };
+		90A5D8E614E3C5D700D1DB07 /* XSDSyncOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSDSyncOperation.m; sourceTree = "<group>"; };
+		90A5D8E914E3C5E300D1DB07 /* XSDSyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; path = XSDSyncOperation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,8 @@
 				9030DEF614E2AF4A00325CFD /* second@2x.png */,
 				9030DEF814E2AF4A00325CFD /* XSDFirstViewController.xib */,
 				9030DEFB14E2AF4A00325CFD /* XSDSecondViewController.xib */,
+				90A5D8E914E3C5E300D1DB07 /* XSDSyncOperation.h */,
+				90A5D8E614E3C5D700D1DB07 /* XSDSyncOperation.m */,
 				9030DEDF14E2AF4900325CFD /* Supporting Files */,
 			);
 			path = DemoForBlog;
@@ -185,8 +190,8 @@
 		9030DF2E14E2BAA500325CFD /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				9030DF2A14E2BA9500325CFD /* EntityNames.h */,
-				9030DF2C14E2BA9F00325CFD /* EntityNames.m */,
+				9030DF2A14E2BA9500325CFD /* XSDEntityNames.h */,
+				9030DF2C14E2BA9F00325CFD /* XSDEntityNames.m */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -306,8 +311,9 @@
 				9030DEE914E2AF4900325CFD /* XSDAppDelegate.m in Sources */,
 				9030DEEC14E2AF4900325CFD /* XSDFirstViewController.m in Sources */,
 				9030DEF314E2AF4A00325CFD /* XSDSecondViewController.m in Sources */,
-				9030DF2D14E2BA9F00325CFD /* EntityNames.m in Sources */,
+				9030DF2D14E2BA9F00325CFD /* XSDEntityNames.m in Sources */,
 				9030DF3714E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld in Sources */,
+				90A5D8E714E3C5D700D1DB07 /* XSDSyncOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
