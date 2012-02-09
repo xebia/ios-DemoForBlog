@@ -19,24 +19,56 @@ NSString * const SyncOperationFinishedNotification = @"SyncOperationFinishedNoti
 
 @synthesize syncDelegate;
 
+NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+-(NSString *) genRandStringLength: (int) len {
+    
+    NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
+    
+    for (int i=0; i<len; i++) {
+        [randomString appendFormat: @"%c", [letters characterAtIndex: rand()%[letters length]] ];
+         }
+         
+         return randomString;
+         }
+
 - (BOOL)syncOnContext:(NSManagedObjectContext*) context {
     
     NSDate *syncStart = [NSDate date];
+    
+    //Simulate a long running operation. ;)
+    [NSThread sleepForTimeInterval:3.0];
 
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:DEMO_ENTITY_NAME inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
 
     NSError *error = nil;
-//    NSArray *demos = [context executeFetchRequest:fetchRequest error:&error];
-//    if (error) {
-//        NSLog(@"Error occured fetching demo objects: %@", error);
-//        return NO;
-//    }
+    NSArray *demos = [context executeFetchRequest:fetchRequest error:&error];
+    if (error) {
+        NSLog(@"Error occured fetching demo objects: %@", error);
+        return NO;
+    }
     
-    XSDDemo *demo = [NSEntityDescription insertNewObjectForEntityForName:DEMO_ENTITY_NAME inManagedObjectContext:context];
-    demo.name = @"Test";
-    demo.info = @"Info";
+    NSMutableArray *mutableDemos = [NSMutableArray arrayWithArray:demos];
+    
+    //Limit the number of objects in the store.
+    while (mutableDemos.count > 6) {
+        NSUInteger index = (random() % [mutableDemos count]);
+        XSDDemo *removedDemo = (XSDDemo *)[mutableDemos objectAtIndex:index];
+        [mutableDemos removeObjectAtIndex:index];
+        
+        [context deleteObject:removedDemo];
+    }
+    
+    //Modify a random object
+    XSDDemo *modifiedDemo = (XSDDemo *)[mutableDemos objectAtIndex:(random() % [mutableDemos count])];
+    modifiedDemo.name = [NSString stringWithFormat:@"%@ %@", [self genRandStringLength: 3], @"Modified!"];
+    
+    
+    XSDDemo *newDemo = [NSEntityDescription insertNewObjectForEntityForName:DEMO_ENTITY_NAME inManagedObjectContext:context];
+    newDemo.name = [NSString stringWithFormat:@"%@ %@", [self genRandStringLength: 3], @"New!"];;
+    newDemo.info = @"Info";
 
     
     //Store resulting objects and broadcast the save operation to the syncdelegate.
