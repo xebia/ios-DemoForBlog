@@ -8,9 +8,9 @@
 
 #import "XSDEntityNames.h"
 
-NSString * const DEMO_ENTITY_NAME          = @"Demo";
-NSString * const GRAPH_DATA_ENTITY_NAME       = @"GraphData";
-NSString * const SYNC_ENTITY_NAME             = @"Sync";
+NSString * const DEMO_ENTITY_NAME          = @"XSDDemo";
+NSString * const GRAPH_DATA_ENTITY_NAME       = @"XSDGraphData";
+NSString * const SYNC_ENTITY_NAME             = @"XSDSync";
 
 
 
