@@ -29,6 +29,7 @@
 		9030DF2D14E2BA9F00325CFD /* XSDEntityNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 9030DF2C14E2BA9F00325CFD /* XSDEntityNames.m */; };
 		9030DF3014E2BB2E00325CFD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9030DF2F14E2BB2E00325CFD /* CoreData.framework */; };
 		9030DF3714E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9030DF3514E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld */; };
+		9034894B14E3D74600ED8748 /* XSDDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034894A14E3D74600ED8748 /* XSDDemo.m */; };
 		90A5D8E714E3C5D700D1DB07 /* XSDSyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5D8E614E3C5D700D1DB07 /* XSDSyncOperation.m */; };
 /* End PBXBuildFile section */
 
@@ -69,12 +70,14 @@
 		9030DF0E14E2AF4A00325CFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9030DF1014E2AF4A00325CFD /* DemoForBlogTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoForBlogTests.h; sourceTree = "<group>"; };
 		9030DF1114E2AF4A00325CFD /* DemoForBlogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoForBlogTests.m; sourceTree = "<group>"; };
-		9030DF2A14E2BA9500325CFD /* XSDEntityNames.h */ = {isa = PBXFileReference; fileEncoding = 4; path = XSDEntityNames.h; sourceTree = "<group>"; };
+		9030DF2A14E2BA9500325CFD /* XSDEntityNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSDEntityNames.h; sourceTree = "<group>"; };
 		9030DF2C14E2BA9F00325CFD /* XSDEntityNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSDEntityNames.m; sourceTree = "<group>"; };
 		9030DF2F14E2BB2E00325CFD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9030DF3614E2BD3C00325CFD /* DemoForBlogModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DemoForBlogModel.xcdatamodel; sourceTree = "<group>"; };
+		9034894914E3D74600ED8748 /* XSDDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XSDDemo.h; path = ../XSDDemo.h; sourceTree = "<group>"; };
+		9034894A14E3D74600ED8748 /* XSDDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XSDDemo.m; path = ../XSDDemo.m; sourceTree = "<group>"; };
 		90A5D8E614E3C5D700D1DB07 /* XSDSyncOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSDSyncOperation.m; sourceTree = "<group>"; };
-		90A5D8E914E3C5E300D1DB07 /* XSDSyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; path = XSDSyncOperation.h; sourceTree = "<group>"; };
+		90A5D8E914E3C5E300D1DB07 /* XSDSyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSDSyncOperation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,10 +150,10 @@
 				9030DEF214E2AF4A00325CFD /* XSDSecondViewController.m */,
 				9030DEF414E2AF4A00325CFD /* second.png */,
 				9030DEF614E2AF4A00325CFD /* second@2x.png */,
-				9030DEF814E2AF4A00325CFD /* XSDFirstViewController.xib */,
 				9030DEFB14E2AF4A00325CFD /* XSDSecondViewController.xib */,
 				90A5D8E914E3C5E300D1DB07 /* XSDSyncOperation.h */,
 				90A5D8E614E3C5D700D1DB07 /* XSDSyncOperation.m */,
+				9030DEF814E2AF4A00325CFD /* XSDFirstViewController.xib */,
 				9030DEDF14E2AF4900325CFD /* Supporting Files */,
 			);
 			path = DemoForBlog;
@@ -159,6 +162,8 @@
 		9030DEDF14E2AF4900325CFD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9034894914E3D74600ED8748 /* XSDDemo.h */,
+				9034894A14E3D74600ED8748 /* XSDDemo.m */,
 				9030DF3514E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld */,
 				9030DEE014E2AF4900325CFD /* DemoForBlog-Info.plist */,
 				9030DEE114E2AF4900325CFD /* InfoPlist.strings */,
@@ -314,6 +319,7 @@
 				9030DF2D14E2BA9F00325CFD /* XSDEntityNames.m in Sources */,
 				9030DF3714E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld in Sources */,
 				90A5D8E714E3C5D700D1DB07 /* XSDSyncOperation.m in Sources */,
+				9034894B14E3D74600ED8748 /* XSDDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
