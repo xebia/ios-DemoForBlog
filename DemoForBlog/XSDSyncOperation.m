@@ -53,7 +53,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     NSMutableArray *mutableDemos = [NSMutableArray arrayWithArray:demos];
     
     //Limit the number of objects in the store.
-    while (mutableDemos.count > 6) {
+    while (mutableDemos.count > 6 && mutableDemos.count > 0) {
         NSUInteger index = (random() % [mutableDemos count]);
         XSDDemo *removedDemo = (XSDDemo *)[mutableDemos objectAtIndex:index];
         [mutableDemos removeObjectAtIndex:index];
@@ -62,8 +62,10 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     }
     
     //Modify a random object
-    XSDDemo *modifiedDemo = (XSDDemo *)[mutableDemos objectAtIndex:(random() % [mutableDemos count])];
-    modifiedDemo.name = [NSString stringWithFormat:@"%@ %@", [self genRandStringLength: 3], @"Modified!"];
+    if (mutableDemos.count > 0) {
+        XSDDemo *modifiedDemo = (XSDDemo *)[mutableDemos objectAtIndex:(random() % [mutableDemos count])];
+        modifiedDemo.name = [NSString stringWithFormat:@"%@ %@", [self genRandStringLength: 3], @"Modified!"];
+    }
     
     
     XSDDemo *newDemo = [NSEntityDescription insertNewObjectForEntityForName:DEMO_ENTITY_NAME inManagedObjectContext:context];
