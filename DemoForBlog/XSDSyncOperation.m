@@ -73,7 +73,6 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     
     //Store resulting objects and broadcast the save operation to the syncdelegate.
     [[NSNotificationCenter defaultCenter] addObserver:syncDelegate selector:@selector(syncDidSave:) name:NSManagedObjectContextDidSaveNotification object:context];
-
     [context save:&error];
     [[NSNotificationCenter defaultCenter] removeObserver:syncDelegate name:NSManagedObjectContextDidSaveNotification object:context];
     if (error) {

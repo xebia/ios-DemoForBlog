@@ -25,13 +25,6 @@
     return self;
 }
 							
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
-}
-
-
 #pragma mark - Table View methods
 
 - (void)tableView:(UITableView *)tableView 
@@ -54,9 +47,12 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 - (NSInteger)tableView:(UITableView*)tableView 
  numberOfRowsInSection:(NSInteger)section 
 {
+    NSArray *sections =[self.fetchedResultsController sections];
+    
+    
     NSInteger numberOfRows = 0;
-    if ([[self.fetchedResultsController sections] count]) {
-        id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    if ([sections count]) {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [sections objectAtIndex:section];
         numberOfRows = [sectionInfo numberOfObjects];
     }
     
@@ -70,10 +66,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [[cell textLabel] setText:[[managedObject valueForKey:@"name"] description]];
     [[cell detailTextLabel] setText:[[managedObject valueForKey:@"info"] description]];
-    
-    //    NSString *path = [[NSBundle mainBundle] pathForResource:[item objectForKey:@"imageKey"] ofType:@"png"];
-    //    UIImage *theImage = [UIImage imageWithContentsOfFile:path];
-    //    cell.imageView.image = theImage;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -188,37 +180,12 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // perform fetch
     NSError *error = nil;
-    //TODO Don't thin we should actually be fetching during view load
+    //TODO Don't think we should actually be fetching during view load
     [[self fetchedResultsController] performFetch:&error];
     if (error) {
         NSLog(@"Error occured fetching data: %@", error);
     }
 	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
