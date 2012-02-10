@@ -156,7 +156,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
             
         case NSFetchedResultsChangeUpdate:
             [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-//            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:

@@ -13,8 +13,6 @@
 #import "XSDSyncOperation.h"
 #import "XSDDemo.h"
 
-NSString * const SyncOperationFinishedNotification = @"SyncOperationFinishedNotification";
-
 @implementation XSDSyncOperation
 
 @synthesize syncDelegate;
