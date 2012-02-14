@@ -18,8 +18,16 @@
 @synthesize tabBarController = _tabBarController;
 @synthesize operationQueue;
 
+static void uncaughtExceptionHandler(NSException *exception) {
+    NSLog(@"CRASH: %@", exception);
+    NSLog(@"Stack Trace: %@", [exception callStackSymbols]);
+    // Internal error reporting
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    // Normal launch stuff
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[XSDFirstViewController alloc] initWithNibName:@"XSDFirstViewController" bundle:nil];
@@ -59,7 +67,6 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
-    [self doSync];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -106,7 +113,7 @@
     if ([NSThread isMainThread]) {
         [self.managedObjectContext mergeChangesFromContextDidSaveNotification:saveNotification];
     } else {
-        [self performSelectorOnMainThread:@selector(syncDidSave:) withObject:saveNotification waitUntilDone:NO];
+        [self performSelectorOnMainThread:@selector(syncDidSave:) withObject:saveNotification waitUntilDone:YES];
     }
 }
 

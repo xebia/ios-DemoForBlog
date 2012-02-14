@@ -178,6 +178,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 {
     [super viewDidLoad];
     
+    XSDAppDelegate *appDelegate = (XSDAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate doSync];
+    
     // perform fetch
     NSError *error = nil;
     //TODO Don't think we should actually be fetching during view load
