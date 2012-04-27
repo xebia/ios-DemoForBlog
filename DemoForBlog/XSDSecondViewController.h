@@ -10,4 +10,9 @@
 
 @interface XSDSecondViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UILabel * animatedLabel;
+
+-(IBAction) animateButtonPressed:(id)sender;
+-(IBAction) glitchToggled:(id)sender;
+
 @end
