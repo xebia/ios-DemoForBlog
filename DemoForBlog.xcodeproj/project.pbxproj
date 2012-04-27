@@ -30,6 +30,7 @@
 		9030DF3014E2BB2E00325CFD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9030DF2F14E2BB2E00325CFD /* CoreData.framework */; };
 		9030DF3714E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9030DF3514E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld */; };
 		9034894B14E3D74600ED8748 /* XSDDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034894A14E3D74600ED8748 /* XSDDemo.m */; };
+		9081D3611549BE9C0020EF17 /* XSDThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9081D3601549BE9C0020EF17 /* XSDThirdViewController.m */; };
 		90A5D8E714E3C5D700D1DB07 /* XSDSyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5D8E614E3C5D700D1DB07 /* XSDSyncOperation.m */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,8 @@
 		9030DF3614E2BD3C00325CFD /* DemoForBlogModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DemoForBlogModel.xcdatamodel; sourceTree = "<group>"; };
 		9034894914E3D74600ED8748 /* XSDDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XSDDemo.h; path = ../XSDDemo.h; sourceTree = "<group>"; };
 		9034894A14E3D74600ED8748 /* XSDDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XSDDemo.m; path = ../XSDDemo.m; sourceTree = "<group>"; };
+		9081D35F1549BE9C0020EF17 /* XSDThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSDThirdViewController.h; sourceTree = "<group>"; };
+		9081D3601549BE9C0020EF17 /* XSDThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSDThirdViewController.m; sourceTree = "<group>"; };
 		90A5D8E614E3C5D700D1DB07 /* XSDSyncOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSDSyncOperation.m; sourceTree = "<group>"; };
 		90A5D8E914E3C5E300D1DB07 /* XSDSyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSDSyncOperation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +158,8 @@
 				90A5D8E614E3C5D700D1DB07 /* XSDSyncOperation.m */,
 				9030DEF814E2AF4A00325CFD /* XSDFirstViewController.xib */,
 				9030DEDF14E2AF4900325CFD /* Supporting Files */,
+				9081D35F1549BE9C0020EF17 /* XSDThirdViewController.h */,
+				9081D3601549BE9C0020EF17 /* XSDThirdViewController.m */,
 			);
 			path = DemoForBlog;
 			sourceTree = "<group>";
@@ -246,7 +251,7 @@
 		9030DECB14E2AF4900325CFD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 9030DECE14E2AF4900325CFD /* Build configuration list for PBXProject "DemoForBlog" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -320,6 +325,7 @@
 				9030DF3714E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld in Sources */,
 				90A5D8E714E3C5D700D1DB07 /* XSDSyncOperation.m in Sources */,
 				9034894B14E3D74600ED8748 /* XSDDemo.m in Sources */,
+				9081D3611549BE9C0020EF17 /* XSDThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

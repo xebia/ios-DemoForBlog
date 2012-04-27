@@ -12,6 +12,8 @@
 
 #import "XSDSecondViewController.h"
 
+#import "XSDThirdViewController.h"
+
 @implementation XSDAppDelegate
 
 @synthesize window = _window;
@@ -32,8 +34,9 @@ static void uncaughtExceptionHandler(NSException *exception) {
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[XSDFirstViewController alloc] initWithNibName:@"XSDFirstViewController" bundle:nil];
     UIViewController *viewController2 = [[XSDSecondViewController alloc] initWithNibName:@"XSDSecondViewController" bundle:nil];
+    UIViewController *viewController3 = [[XSDThirdViewController alloc] initWithNibName:nil bundle:nil];
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController3, nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
