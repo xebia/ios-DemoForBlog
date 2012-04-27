@@ -58,7 +58,6 @@
             }
         }
         
-//        CGRect bounds = animatedLabel.layer.bounds;
         animatedLabel.frame = frame;
     }];
 }
