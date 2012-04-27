@@ -32,10 +32,10 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
 
 - (BOOL)syncOnContext:(NSManagedObjectContext*) context {
     
-    NSDate *syncStart = [NSDate date];
+//    NSDate *syncStart = [NSDate date];
     
     //Simulate a long running operation. ;)
-//Will it crash without a delay?    [NSThread sleepForTimeInterval:0.4];
+    [NSThread sleepForTimeInterval:1.0];
 
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:DEMO_ENTITY_NAME inManagedObjectContext:context];
@@ -82,8 +82,8 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     
     
     //If succesful
-    NSDate *syncEnd = [NSDate date];
-    NSLog(@"Sync completed in %f seconds.", ([syncEnd timeIntervalSinceDate:syncStart]));
+//    NSDate *syncEnd = [NSDate date];
+//    NSLog(@"Sync completed in %f seconds.", ([syncEnd timeIntervalSinceDate:syncStart]));
 
     return YES;
 }
