@@ -37,6 +37,7 @@ static void uncaughtExceptionHandler(NSException *exception) {
     UIViewController *viewController3 = [[XSDThirdViewController alloc] initWithNibName:nil bundle:nil];
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController3, nil];
+    self.tabBarController.selectedIndex = 2;
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
