@@ -30,6 +30,10 @@
 		9030DF3014E2BB2E00325CFD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9030DF2F14E2BB2E00325CFD /* CoreData.framework */; };
 		9030DF3714E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9030DF3514E2BD3C00325CFD /* DemoForBlogModel.xcdatamodeld */; };
 		9034894B14E3D74600ED8748 /* XSDDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034894A14E3D74600ED8748 /* XSDDemo.m */; };
+		907F5EB715546A4D00E29604 /* XSDFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F5EB615546A4D00E29604 /* XSDFourthViewController.m */; };
+		907F5EBA15546BD200E29604 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 907F5EB915546BD200E29604 /* QuartzCore.framework */; };
+		907F5EBD1554716200E29604 /* fourth.png in Resources */ = {isa = PBXBuildFile; fileRef = 907F5EBB1554716200E29604 /* fourth.png */; };
+		907F5EBE1554716200E29604 /* fourth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 907F5EBC1554716200E29604 /* fourth@2x.png */; };
 		9081D3611549BE9C0020EF17 /* XSDThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9081D3601549BE9C0020EF17 /* XSDThirdViewController.m */; };
 		9081D369154A68D90020EF17 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 9081D367154A68D90020EF17 /* third.png */; };
 		9081D36A154A68D90020EF17 /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9081D368154A68D90020EF17 /* third@2x.png */; };
@@ -79,6 +83,11 @@
 		9030DF3614E2BD3C00325CFD /* DemoForBlogModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DemoForBlogModel.xcdatamodel; sourceTree = "<group>"; };
 		9034894914E3D74600ED8748 /* XSDDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XSDDemo.h; path = ../XSDDemo.h; sourceTree = "<group>"; };
 		9034894A14E3D74600ED8748 /* XSDDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XSDDemo.m; path = ../XSDDemo.m; sourceTree = "<group>"; };
+		907F5EB515546A4D00E29604 /* XSDFourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSDFourthViewController.h; sourceTree = "<group>"; };
+		907F5EB615546A4D00E29604 /* XSDFourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSDFourthViewController.m; sourceTree = "<group>"; };
+		907F5EB915546BD200E29604 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		907F5EBB1554716200E29604 /* fourth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fourth.png; sourceTree = "<group>"; };
+		907F5EBC1554716200E29604 /* fourth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fourth@2x.png"; sourceTree = "<group>"; };
 		9081D35F1549BE9C0020EF17 /* XSDThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSDThirdViewController.h; sourceTree = "<group>"; };
 		9081D3601549BE9C0020EF17 /* XSDThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSDThirdViewController.m; sourceTree = "<group>"; };
 		9081D367154A68D90020EF17 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
@@ -92,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				907F5EBA15546BD200E29604 /* QuartzCore.framework in Frameworks */,
 				9030DF3014E2BB2E00325CFD /* CoreData.framework in Frameworks */,
 				9030DED914E2AF4900325CFD /* UIKit.framework in Frameworks */,
 				9030DEDB14E2AF4900325CFD /* Foundation.framework in Frameworks */,
@@ -115,6 +125,7 @@
 		9030DEC914E2AF4900325CFD = {
 			isa = PBXGroup;
 			children = (
+				907F5EB915546BD200E29604 /* QuartzCore.framework */,
 				9030DF2F14E2BB2E00325CFD /* CoreData.framework */,
 				9030DEDE14E2AF4900325CFD /* DemoForBlog */,
 				9030DF0A14E2AF4A00325CFD /* DemoForBlogTests */,
@@ -166,6 +177,10 @@
 				9081D3601549BE9C0020EF17 /* XSDThirdViewController.m */,
 				9081D367154A68D90020EF17 /* third.png */,
 				9081D368154A68D90020EF17 /* third@2x.png */,
+				907F5EB515546A4D00E29604 /* XSDFourthViewController.h */,
+				907F5EB615546A4D00E29604 /* XSDFourthViewController.m */,
+				907F5EBB1554716200E29604 /* fourth.png */,
+				907F5EBC1554716200E29604 /* fourth@2x.png */,
 			);
 			path = DemoForBlog;
 			sourceTree = "<group>";
@@ -291,6 +306,8 @@
 				9030DEFD14E2AF4A00325CFD /* XSDSecondViewController.xib in Resources */,
 				9081D369154A68D90020EF17 /* third.png in Resources */,
 				9081D36A154A68D90020EF17 /* third@2x.png in Resources */,
+				907F5EBD1554716200E29604 /* fourth.png in Resources */,
+				907F5EBE1554716200E29604 /* fourth@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +351,7 @@
 				90A5D8E714E3C5D700D1DB07 /* XSDSyncOperation.m in Sources */,
 				9034894B14E3D74600ED8748 /* XSDDemo.m in Sources */,
 				9081D3611549BE9C0020EF17 /* XSDThirdViewController.m in Sources */,
+				907F5EB715546A4D00E29604 /* XSDFourthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
