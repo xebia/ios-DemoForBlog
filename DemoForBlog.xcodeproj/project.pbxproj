@@ -39,6 +39,8 @@
 		9081D36A154A68D90020EF17 /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9081D368154A68D90020EF17 /* third@2x.png */; };
 		90A5D8E714E3C5D700D1DB07 /* XSDSyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5D8E614E3C5D700D1DB07 /* XSDSyncOperation.m */; };
 		90B94E87155861200010A385 /* XSDFifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B94E86155861200010A385 /* XSDFifthViewController.m */; };
+		90B94E8B1558699F0010A385 /* fifth.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B94E891558699F0010A385 /* fifth.png */; };
+		90B94E8C1558699F0010A385 /* fifth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B94E8A1558699F0010A385 /* fifth@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		90A5D8E914E3C5E300D1DB07 /* XSDSyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSDSyncOperation.h; sourceTree = "<group>"; };
 		90B94E85155861200010A385 /* XSDFifthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSDFifthViewController.h; sourceTree = "<group>"; };
 		90B94E86155861200010A385 /* XSDFifthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSDFifthViewController.m; sourceTree = "<group>"; };
+		90B94E891558699F0010A385 /* fifth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifth.png; sourceTree = "<group>"; };
+		90B94E8A1558699F0010A385 /* fifth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fifth@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,8 @@
 				907F5EBC1554716200E29604 /* fourth@2x.png */,
 				90B94E85155861200010A385 /* XSDFifthViewController.h */,
 				90B94E86155861200010A385 /* XSDFifthViewController.m */,
+				90B94E891558699F0010A385 /* fifth.png */,
+				90B94E8A1558699F0010A385 /* fifth@2x.png */,
 			);
 			path = DemoForBlog;
 			sourceTree = "<group>";
@@ -313,6 +319,8 @@
 				9081D36A154A68D90020EF17 /* third@2x.png in Resources */,
 				907F5EBD1554716200E29604 /* fourth.png in Resources */,
 				907F5EBE1554716200E29604 /* fourth@2x.png in Resources */,
+				90B94E8B1558699F0010A385 /* fifth.png in Resources */,
+				90B94E8C1558699F0010A385 /* fifth@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
