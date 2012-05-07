@@ -43,7 +43,7 @@ static void uncaughtExceptionHandler(NSException *exception) {
     UIViewController *viewController5 = [[XSDFifthViewController alloc] initWithNibName:nil bundle:nil];
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController3, viewController4, viewController5, nil];
-    self.tabBarController.selectedIndex = 2;
+    self.tabBarController.selectedIndex = 4;
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
