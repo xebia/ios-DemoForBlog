@@ -8,6 +8,20 @@
 
 #import "XSDFifthViewController.h"
 
+@interface XSDViewExt : UIView
+
+@end
+
+@implementation XSDViewExt
+//Custom hittesting is needed to allow the scroll view to respond to drag events outside it's own bounds.
+- (UIView *) hitTest:(CGPoint) point withEvent:(UIEvent *)event {
+    if ([self pointInside:point withEvent:event]) {
+        return [self.subviews objectAtIndex:0];
+    }
+    return nil;
+}
+@end
+
 @interface XSDFifthViewController ()
 
 @end
