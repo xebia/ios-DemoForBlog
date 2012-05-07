@@ -16,6 +16,8 @@
 
 #import "XSDFourthViewController.h"
 
+#import "XSDFifthViewController.h"
+
 @implementation XSDAppDelegate
 
 @synthesize window = _window;
@@ -38,8 +40,9 @@ static void uncaughtExceptionHandler(NSException *exception) {
     UIViewController *viewController2 = [[XSDSecondViewController alloc] initWithNibName:@"XSDSecondViewController" bundle:nil];
     UIViewController *viewController3 = [[XSDThirdViewController alloc] initWithNibName:nil bundle:nil];
     UIViewController *viewController4 = [[XSDFourthViewController alloc] initWithNibName:nil bundle:nil];
+    UIViewController *viewController5 = [[XSDFifthViewController alloc] initWithNibName:nil bundle:nil];
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController3, viewController4, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController3, viewController4, viewController5, nil];
     self.tabBarController.selectedIndex = 2;
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
