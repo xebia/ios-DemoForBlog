@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A482183179995DD00549A3D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A482182179995DD00549A3D /* Default-568h@2x.png */; };
+		4A482186179996A700549A3D /* XSDSixthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A482185179996A700549A3D /* XSDSixthViewController.m */; };
+		4A482189179998EE00549A3D /* sixth.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A482187179998EE00549A3D /* sixth.png */; };
+		4A48218A179998EE00549A3D /* sixth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A482188179998EE00549A3D /* sixth@2x.png */; };
 		9030DED914E2AF4900325CFD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9030DED814E2AF4900325CFD /* UIKit.framework */; };
 		9030DEDB14E2AF4900325CFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9030DEDA14E2AF4900325CFD /* Foundation.framework */; };
 		9030DEDD14E2AF4900325CFD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9030DEDC14E2AF4900325CFD /* CoreGraphics.framework */; };
@@ -54,6 +58,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A482182179995DD00549A3D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4A482184179996A700549A3D /* XSDSixthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSDSixthViewController.h; sourceTree = "<group>"; };
+		4A482185179996A700549A3D /* XSDSixthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSDSixthViewController.m; sourceTree = "<group>"; };
+		4A482187179998EE00549A3D /* sixth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sixth.png; sourceTree = "<group>"; };
+		4A482188179998EE00549A3D /* sixth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sixth@2x.png"; sourceTree = "<group>"; };
 		9030DED414E2AF4900325CFD /* DemoForBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoForBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9030DED814E2AF4900325CFD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9030DEDA14E2AF4900325CFD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -132,6 +141,7 @@
 		9030DEC914E2AF4900325CFD = {
 			isa = PBXGroup;
 			children = (
+				4A482182179995DD00549A3D /* Default-568h@2x.png */,
 				907F5EB915546BD200E29604 /* QuartzCore.framework */,
 				9030DF2F14E2BB2E00325CFD /* CoreData.framework */,
 				9030DEDE14E2AF4900325CFD /* DemoForBlog */,
@@ -192,6 +202,10 @@
 				90B94E86155861200010A385 /* XSDFifthViewController.m */,
 				90B94E891558699F0010A385 /* fifth.png */,
 				90B94E8A1558699F0010A385 /* fifth@2x.png */,
+				4A482184179996A700549A3D /* XSDSixthViewController.h */,
+				4A482185179996A700549A3D /* XSDSixthViewController.m */,
+				4A482187179998EE00549A3D /* sixth.png */,
+				4A482188179998EE00549A3D /* sixth@2x.png */,
 			);
 			path = DemoForBlog;
 			sourceTree = "<group>";
@@ -283,7 +297,7 @@
 		9030DECB14E2AF4900325CFD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 9030DECE14E2AF4900325CFD /* Build configuration list for PBXProject "DemoForBlog" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -321,6 +335,9 @@
 				907F5EBE1554716200E29604 /* fourth@2x.png in Resources */,
 				90B94E8B1558699F0010A385 /* fifth.png in Resources */,
 				90B94E8C1558699F0010A385 /* fifth@2x.png in Resources */,
+				4A482183179995DD00549A3D /* Default-568h@2x.png in Resources */,
+				4A482189179998EE00549A3D /* sixth.png in Resources */,
+				4A48218A179998EE00549A3D /* sixth@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +383,7 @@
 				9081D3611549BE9C0020EF17 /* XSDThirdViewController.m in Sources */,
 				907F5EB715546A4D00E29604 /* XSDFourthViewController.m in Sources */,
 				90B94E87155861200010A385 /* XSDFifthViewController.m in Sources */,
+				4A482186179996A700549A3D /* XSDSixthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +447,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -442,6 +464,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
@@ -454,12 +477,17 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
