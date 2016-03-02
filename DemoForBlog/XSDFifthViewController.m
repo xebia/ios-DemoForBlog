@@ -40,6 +40,8 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    
     CGRect frame = [[UIScreen mainScreen] applicationFrame];
     
     self.view = [[XSDViewExt alloc] initWithFrame:frame];
